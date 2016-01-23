@@ -1,0 +1,74 @@
+<h1 id='text'> Welcome to TindCat </h1>
+<h1 id='text'> Love At First Hiss! </h1>
+
+<div class = 'name'>
+ <p><%=@catname%>, <%=@catage %> </p>
+</div>
+<br>
+<h1 id='match'> It's a PURRRRR-Fect Match!</h1>
+<div id=pic style="position:absolute; top:400px">
+<img class='circular' src='http://thecatapi.com/api/images/get?format=src'></div>
+
+<br>
+
+
+<%if%>
+<div id="woof">
+<%= button_to "Woof", "#", :method => "get", id: 'woof'%>
+</div>
+<%end%>
+<div id="meow">
+<%= button_to "Meow", kittylove_path, :method => "get", id: 'meow'%>
+</div>
+
+
+
+<%=@a%>
+
+
+
+<li><%= "City: " + @catcity.titleize%></li>
+<li><%= "State: " + @catstate.titleize%></li>
+<li><%= "College: " + @catu.titleize%></li>
+<li><%= "Favorite Sport: " + @catsport.titleize%></li>
+<li><%= "Favorite Book: " + @catbook.titleize%></li>
+<li><%= "My Spirit Animal: " + @catspirit.titleize%></li>
+
+
+
+
+<script>
+
+var count = <%=@a%>
+// document.getElementById("meow").onclick =
+$(document).ready(function meow(){
+  $("#meow").click(function(){
+  $("#pic").animate({
+    left: '1000px',
+    opacity: '0',
+    });
+  if (count == 4){console.log("PURRRRR-Fect Match!")};
+});
+});
+</script>
+
+
+
+<script>
+$(document).ready(function woof(){
+    $("#woof").click(function(){
+        $("#pic").animate({
+          left: '-1000px',
+          opacity: '0',
+          });
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#woof").click(function(){
+        $("#match").fadeIn(500);
+    });
+});
+</script>

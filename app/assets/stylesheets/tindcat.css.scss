@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.circular {
+	width: 600px;
+	height: 600px;
+	border-radius: 30px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	/*background: url('http://thecatapi.com/api/images/get?format=src') no-repeat;*/
+	}
+
+#text{
+font-family: 'Architects Daughter', cursive;
+}
+
+li,p{
+font-family: 'Comfortaa', cursive;
+}
+
+#match{
+	display:none;
+}
