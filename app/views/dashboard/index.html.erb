@@ -1,30 +1,35 @@
-<h1 id='text'> Welcome to TindCat </h1>
-<h1 id='text'> Love At First Hiss! </h1>
+<h1 id='text'> TindCat </h1>
+<h3 id='text'> Love At First Hiss! </h3>
 
 <div class = 'name'>
  <p><%=@catname%>, <%=@catage %> </p>
 </div>
 <br>
-<h1 id='match'> It's a PURRRRR-Fect Match!</h1>
+<div id='match'>
+<h1> It's a PURRRRR-Fect Match!</h1>
+<%= button_to "More Kitty Love?", kittylove_path, :method => "get", id: 'woof'%>
+<%= button_to "Get Directions", "http://maps.apple.com/?daddr=#{@catstate}&z=10&t=s", class:'btn btn-success btn-lg'%>
+
+</div>
+
 <div id=pic style="position:absolute; top:400px">
 <img class='circular' src='http://thecatapi.com/api/images/get?format=src'></div>
-
 <br>
 
 
-<%if%>
+<%#if%>
 <div id="woof">
-<%= button_to "Woof", "#", :method => "get", id: 'woof'%>
+<%= button_to "Woof", '#', :method => "get", id: 'bark', class:'btn btn-danger btn-lg'%>
 </div>
-<%end%>
+<%#end%>
 <div id="meow">
-<%= button_to "Meow", kittylove_path, :method => "get", id: 'meow'%>
+<%= button_to "Meow", '#', :method => "get", id: 'meow', class:'btn btn-success btn-lg'%>
 </div>
 
 
 
 <%=@a%>
-
+<%=@catstate%>
 
 
 <li><%= "City: " + @catcity.titleize%></li>
@@ -36,39 +41,34 @@
 
 
 
-
+<!-- Meow Animation -->
 <script>
-
 var count = <%=@a%>
 // document.getElementById("meow").onclick =
 $(document).ready(function meow(){
-  $("#meow").click(function(){
+  $("#meow").click(function(event){
+    console.log('yo');
   $("#pic").animate({
     left: '1000px',
     opacity: '0',
     });
-  if (count == 4){console.log("PURRRRR-Fect Match!")};
+  if (count == 4){
+    $("#match").fadeIn(10).animate({fontSize:'4.5em'});
+  };
 });
 });
 </script>
 
 
-
+<!-- Woof Animation -->
 <script>
 $(document).ready(function woof(){
-    $("#woof").click(function(){
+    $("#bark").click(function(event){
+      console.log("hi");
         $("#pic").animate({
           left: '-1000px',
           opacity: '0',
           });
-    });
-});
-</script>
-
-<script>
-$(document).ready(function(){
-    $("#woof").click(function(){
-        $("#match").fadeIn(500);
     });
 });
 </script>

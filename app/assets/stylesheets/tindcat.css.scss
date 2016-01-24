@@ -10,7 +10,7 @@
 	/*background: url('http://thecatapi.com/api/images/get?format=src') no-repeat;*/
 	}
 
-#text{
+#text, #match{
 font-family: 'Architects Daughter', cursive;
 }
 
@@ -20,4 +20,5 @@ font-family: 'Comfortaa', cursive;
 
 #match{
 	display:none;
+	// position: absolute;
 }
