@@ -1,9 +1,30 @@
-<h1 id='text'> TindCat </h1>
-<h3 id='text'> Love At First Hiss! </h3>
-
-<div class = 'name'>
- <p><%=@catname%>, <%=@catage %> </p>
+<br><br>
+<div class="container-fluid">
+  <div class='row'>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-9"><h1 id='text'> TindCat </h1></div>
+    <div class="col-sm-1"></div>
+  </div>
 </div>
+
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8"><h3 id='text2'>Love At First Hiss</h3></div>
+    <div class="col-sm-2"></div>
+  </div>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-8"><p><%=@catname%>, <%=@catage %> </p></div>
+    <!-- <div class="col-sm-1"></div> -->
+  </div>
+</div>
+
+
+
 <br>
 <div id='match'>
 <h1> It's a PURRRRR-Fect Match!</h1>
@@ -12,7 +33,7 @@
 
 </div>
 
-<div id=pic style="position:absolute; top:400px">
+<div id=pic>
 <img class='circular' src='http://thecatapi.com/api/images/get?format=src'></div>
 <br>
 
@@ -26,18 +47,22 @@
 <%= button_to "Meow", '#', :method => "get", id: 'meow', class:'btn btn-success btn-lg'%>
 </div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class='info'>
+      <div class='col-sm-3'></div>
+      <div class='col-sm-9'>
+        <%#= "City: " + @catcity.titleize%>
+        <%= "State: " + @catstate.titleize%><br>
+        <%= "College: " + @catu.titleize%><br>
+        <%#= "Favorite Sport: " + @catsport.titleize%>
+        <%= "Favorite Book: " + @catbook.titleize%><br>
+        <%= "My Spirit Animal: " + @catspirit.titleize%></div>
+      <!-- <div class='col-sm-2'></div> -->
+    </div>
+  </div>
+</div>
 
-
-<%=@a%>
-<%=@catstate%>
-
-
-<li><%= "City: " + @catcity.titleize%></li>
-<li><%= "State: " + @catstate.titleize%></li>
-<li><%= "College: " + @catu.titleize%></li>
-<li><%= "Favorite Sport: " + @catsport.titleize%></li>
-<li><%= "Favorite Book: " + @catbook.titleize%></li>
-<li><%= "My Spirit Animal: " + @catspirit.titleize%></li>
 
 
 
