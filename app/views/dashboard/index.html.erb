@@ -19,7 +19,6 @@
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-8"><p><%=@catname%>, <%=@catage %> </p></div>
-    <!-- <div class="col-sm-1"></div> -->
   </div>
 </div>
 
@@ -40,12 +39,16 @@
 
 <%#if%>
 <div id="woof">
-<%= button_to "Woof", '#', :method => "get", id: 'bark', class:'btn btn-danger btn-lg'%>
+<%#= button_to "Woof", '#', :method => "get", id: 'bark', class:'btn btn-danger btn-lg'%>
+<%= link_to image_tag("puppy_icon.jpg"), "#", :alt =>"Puppy", :method =>"get", id: "bark"%>
 </div>
 <%#end%>
 <div id="meow">
-<%= button_to "Meow", '#', :method => "get", id: 'meow', class:'btn btn-success btn-lg'%>
+<%#= button_to "Meow", '#', :method => "get", id: 'meow', class:'btn btn-success btn-lg'%>
+<%= link_to image_tag("kitty_icon.jpg"), "#", :alt =>"Kitty", :method =>"get", id: "meow"%>
 </div>
+
+<%#= image_tag("puppy_icon.jpg", :alt => "Puppy", :id => "Puppy") %>
 
 <div class="container-fluid">
   <div class="row">
@@ -53,11 +56,12 @@
       <div class='col-sm-3'></div>
       <div class='col-sm-9'>
         <%#= "City: " + @catcity.titleize%>
-        <%= "State: " + @catstate.titleize%><br>
-        <%= "College: " + @catu.titleize%><br>
+        <p id='bold'>State: <%=@catstate.titleize%></p>
+        <p id='bold'>College: <%=@catu.titleize%></p>
         <%#= "Favorite Sport: " + @catsport.titleize%>
-        <%= "Favorite Book: " + @catbook.titleize%><br>
-        <%= "My Spirit Animal: " + @catspirit.titleize%></div>
+        <p id='bold'>Favorite Book: <%=@catbook.titleize%></p>
+        <p id='bold'>My Spirit Animal: <%=@catspirit.titleize%></p>
+      </div>
       <!-- <div class='col-sm-2'></div> -->
     </div>
   </div>
