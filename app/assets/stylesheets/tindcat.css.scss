@@ -10,6 +10,14 @@
 	/*background: url('http://thecatapi.com/api/images/get?format=src') no-repeat;*/
 	}
 
+	#text{
+		margin-left: -16px;
+	}
+
+	#name{
+		margin-left: -20px;
+	}
+
 #text, #match{
 font-family: 'Architects Daughter', cursive;
 font-size: 250px;
@@ -109,4 +117,5 @@ body {
 	background: firebrick;
 	border-radius: 30px;
 	margin-right: 70px;
+	margin-left: 20px;
 }
