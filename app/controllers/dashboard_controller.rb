@@ -4,10 +4,11 @@ class DashboardController < ApplicationController
      @catname = Faker::Name.first_name
      @catcity = Faker::Address.city
      @catstate = Faker::Address.state
-     @catu = Faker::University.name
+     @catu = Faker::Hipster.words(1)
      @catsport = Faker::Team.sport
      @catbook = Faker::Book.title
      @catspirit = Faker::Team.creature
+     @catjob = Faker::Company.profession
      @catage = rand(18..28)
      @catlat = Faker::Address.latitude
      @catlong = Faker::Address.longitude

@@ -12,7 +12,8 @@
 
 #text, #match{
 font-family: 'Architects Daughter', cursive;
-font-size: 200px;
+font-size: 250px;
+color: red;
 }
 
 #text2{
@@ -35,29 +36,31 @@ font-size: 4.5em;
 
 #pic{
 	position: absolute;
-	top:450px;
-	left: 200px;
+	// top:250px;
+	// left: 200px;
 }
 
 .info{
 	padding-top: 40px;
 	font-size: 2em;
 	font-family: 'Comfortaa', cursive;
+	// border-color: red;
+	// border-style: dashed;
 }
 
 // btn{
 // 	height:100px;
 // }
 #woof{
-	margin-top: 640px;
-	margin-left: 300px;
+	margin-top: 599px;
+	margin-left: -80px;
 	// padding-top: 200px;
 }
 
 #meow{
 	// padding-left: 100px;
-	margin-top: -190px;
-	margin-left: 266px;
+	margin-top: -189px;
+	margin-left: 100px;
 }
 
 img{
@@ -66,6 +69,7 @@ img{
 
 #bold{
 	font-size: 1.2em;
+	padding-left: 30px;
 }
 
 #morebutton{
@@ -85,4 +89,24 @@ img{
     font-size: 35px;
     padding-top: 30px;
     margin-top: -120px;
+}
+
+body {
+   background-image: image-url('swirl_pattern.png');
+}
+
+#stuff{
+	// border-style: dashed;
+	// border-color: red;
+	padding-left: 20px;
+
+}
+
+#yo{
+	// border-style: groove;
+	// border-color: red;
+	color: white;
+	background: firebrick;
+	border-radius: 30px;
+	margin-right: 70px;
 }
