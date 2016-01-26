@@ -7,6 +7,9 @@
   </div>
 </div>
 
+
+
+
 <!-- <div class="container-fluid">
   <div class="row">
     <div class="col-sm-2"></div>
@@ -14,6 +17,7 @@
     <div class="col-sm-2"></div>
   </div>
 </div> -->
+<br>
 
 <div class="container-fluid">
   <div class="row">
@@ -25,30 +29,37 @@
 
 
 <br>
-<div id='match'>
-<h1> It's a PURRRRR-Fect Match!</h1>
-<%= button_to "More Kitty Love?", kittylove_path, :method => "get", id: 'woof'%>
-<%= button_to "Get Directions", "http://maps.apple.com/?daddr=#{@catstate}&z=10&t=s", class:'btn btn-success btn-lg'%>
 
-</div>
 
 <div id=pic>
 <img class='circular' src='http://thecatapi.com/api/images/get?format=src'></div>
 <br>
 
+<div id='match'>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
+<p> It's a PURRRRR-Fect Match!</p>
+</div>
+</div>
+</div>
+<%= button_to "More Kitty Love?", kittylove_path, :method => "get", class:"btn btn-success btn-lg", id: 'morebutton'%>
+<%= button_to "Get Directions", "http://maps.apple.com/?daddr=#{@catstate}&z=10&t=s", class:'btn btn-primary btn-lg', id: 'mapsbutton'%>
+</div>
 
-<%#if%>
+
+
 <div id="woof">
 <%#= button_to "Woof", '#', :method => "get", id: 'bark', class:'btn btn-danger btn-lg'%>
 <%= link_to image_tag("puppy_icon.jpg"), "#", :alt =>"Puppy", :method =>"get", id: "bark"%>
 </div>
-<%#end%>
 <div id="meow">
 <%#= button_to "Meow", '#', :method => "get", id: 'meow', class:'btn btn-success btn-lg'%>
 <%= link_to image_tag("kitty_icon.jpg"), "#", :alt =>"Kitty", :method =>"get", id: "meow"%>
 </div>
 
-<%#= image_tag("puppy_icon.jpg", :alt => "Puppy", :id => "Puppy") %>
+
 
 <div class="container-fluid">
   <div class="row">
@@ -76,14 +87,15 @@ var count = <%=@a%>
 // document.getElementById("meow").onclick =
 $(document).ready(function meow(){
   $("#meow").click(function(event){
-    console.log('yo');
-  $("#pic").animate({
-    left: '1000px',
-    opacity: '0',
-    });
-  if (count == 4){
-    $("#match").fadeIn(10).animate({fontSize:'4.5em'});
-  };
+  $("#pic").fadeOut(500);
+  $("#match").fadeIn(2000);
+  // $("#pic").animate({
+  //   left: '1000px',
+  //   opacity: '0',
+  //   });
+  // if (count == 1,2,3,4){
+  //   $("#pic").fadeOut("slow");
+  // };
 });
 });
 </script>
