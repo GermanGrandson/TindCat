@@ -15,7 +15,7 @@
 	}
 
 	#name{
-		margin-left: -20px;
+		margin-left: 50px;
 	}
 
 #text, #match{
@@ -61,14 +61,14 @@ font-size: 4.5em;
 // }
 #woof{
 	margin-top: 599px;
-	margin-left: -80px;
+	margin-left: 0px;
 	// padding-top: 200px;
 }
 
 #meow{
 	// padding-left: 100px;
 	margin-top: -189px;
-	margin-left: 100px;
+	margin-left: 125px;
 }
 
 img{
@@ -76,8 +76,8 @@ img{
 }
 
 #bold{
-	font-size: 1.2em;
-	padding-left: 30px;
+	font-size: 1.1em;
+	padding-left: 40px;
 }
 
 #morebutton{
@@ -114,8 +114,14 @@ body {
 	// border-style: groove;
 	// border-color: red;
 	color: white;
-	background: firebrick;
+	background: red;
 	border-radius: 30px;
-	margin-right: 70px;
-	margin-left: 20px;
+	margin-right: -30px;
+	margin-left: 0px;
+	padding-left: 50px;
+}
+
+#blurb{
+	font-size: 2em;
+	padding-left: 30px;
 }
