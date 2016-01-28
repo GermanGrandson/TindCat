@@ -122,8 +122,10 @@ var count = <%=@a%>
 $(document).ready(function meow(){
   $("#meow").click(function(event){
   $("#pic").animate({
-    left: '1000px',
+    left: '500px',
     opacity: '0',
+  },
+{duration: 500
     });
   if (count == 4){
     $("#pic").fadeOut(500);
@@ -141,9 +143,11 @@ $(document).ready(function woof(){
     $("#bark").click(function(event){
       console.log("hi");
         $("#pic").animate({
-          left: '-1000px',
+          left: '-700px',
           opacity: '0',
-          });
+        },
+      {duration: 500
     });
-});
+    });
+    });
 </script>
