@@ -139,8 +139,8 @@ $(document).ready(function meow(){
   if (count == 4){
     $("#pic").fadeOut(500);
     $("#match").fadeIn(2000);
-  //   $("#pic").fadeOut("slow");
   };
+  window.location = "http://tindcat.herokuapp.com";
 });
 });
 </script>
@@ -155,8 +155,10 @@ $(document).ready(function woof(){
           left: '-700px',
           opacity: '0',
         },
-      {duration: 500
+      {
+        duration: 500
     });
+    document.location = "http://tindcat.herokuapp.com";
     });
     });
 </script>
