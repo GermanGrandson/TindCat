@@ -12,7 +12,7 @@ class DashboardController < ApplicationController
      @catage = rand(18..28)
      @catlat = Faker::Address.latitude
      @catlong = Faker::Address.longitude
-     @a = rand(1..4)
+     @a = rand(1..3)
      @address = @catstate
     #  @lat = Location.create(address:"#{@catstate}",latitude:@latitude, longitude:@longitude)
     #  @long = Location.long.last
