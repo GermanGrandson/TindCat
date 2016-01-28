@@ -48,14 +48,23 @@
 <div id='match'>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-10">
-<p> It's a PURRRRR-Fect Match!</p>
-</div>
-</div>
-</div>
-<%= button_to "More Kitty Love?", kittylove_path, :method => "get", class:"btn btn-success btn-lg", id: 'morebutton'%>
-<%= button_to "Get Directions", "http://maps.apple.com/?daddr=#{@catstate}&z=10&t=s", class:'btn btn-primary btn-lg', id: 'mapsbutton'%>
+      <div class="col-xs-0 col-md-2"></div>
+        <div class="col-xs-12 col-md-10">
+          <p> It's a PURRRRR-Fect Match!</p>
+          </div>
+            <div class="col-xs-0 col-md-0">
+            </div>
+      </div>
+              <div class='row'>
+                <div class="col-xs-1 col-md-2"></div>
+                  <div class="col-xs-8 col-md-8">
+                    <%= button_to "More Kitty Love?", kittylove_path, :method => "get", class:"btn btn-success btn-lg", id: 'morebutton'%>
+                    <%= button_to "Get Directions", "http://maps.apple.com/?daddr=#{@catstate}&z=10&t=s", class:'btn btn-primary btn-lg', id: 'mapsbutton'%>
+                  </div>
+                    <div class="col-xs-2 col-md-2">
+                    </div>
+              </div>
+  </div>
 </div>
 
 <div class="container-fluid">
@@ -127,7 +136,7 @@ $(document).ready(function meow(){
   },
 {duration: 500
     });
-  if (count == 4){
+  if (count == 1,2,3,4){
     $("#pic").fadeOut(500);
     $("#match").fadeIn(2000);
   //   $("#pic").fadeOut("slow");
