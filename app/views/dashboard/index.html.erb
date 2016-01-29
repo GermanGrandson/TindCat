@@ -57,7 +57,7 @@
               <div class='row'>
                 <div class="col-xs-1 col-md-2"></div>
                   <div class="col-xs-8 col-md-8">
-                    <%= button_to "More Kitty Love?", kittylove_path, :method => "get", class:"btn btn-success btn-lg", id: 'morebutton'%>
+                    <%= button_to "More Kitty Love?", kittylove_path, :method => :get, class:"btn btn-success btn-lg", id: 'morebutton'%>
                     <%= button_to "Get Directions", "http://maps.apple.com/?daddr=#{@catstate}&z=10&t=s", class:'btn btn-primary btn-lg', id: 'mapsbutton'%>
                   </div>
                     <div class="col-xs-2 col-md-2">
